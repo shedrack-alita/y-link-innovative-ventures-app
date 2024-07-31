@@ -717,7 +717,7 @@ img {
 }
 
 .main-header .logo-box .logo{
-  max-width: 152px;
+  max-width: 170px;
   width: 100%;
 }
 
@@ -770,9 +770,6 @@ img {
   transition: all 500ms ease;
 }
 
-.main-header .nav-right .search-box-outer:hover{
-
-}
 
 
 /*** Search Popup ***/
@@ -3853,6 +3850,7 @@ div#mCSB_1_container{
   position: relative;
   display: block;
   margin-bottom: 30px;
+  max-width: 250px;
 }
 
 .main-footer .footer-top{
@@ -7688,10 +7686,6 @@ div#mCSB_1_container{
 .header-upper-two .upper-inner .option-block .support-center h6 a{
   display: inline-block;
   color: #141417;
-}
-
-.header-upper-two .upper-inner .option-block .support-center h6 a:hover{
-
 }
 
 .header-upper-two .upper-inner .option-block .search-box-outer{
