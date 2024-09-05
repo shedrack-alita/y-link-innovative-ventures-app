@@ -3065,6 +3065,10 @@ div#mCSB_1_container{
   overflow: hidden;
 }
 
+.testimonial-section .head {
+  color: #fff
+}
+
 .testimonial-section:before{
   position: absolute;
   content: '';
