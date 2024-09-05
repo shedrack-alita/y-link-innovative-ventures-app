@@ -6526,6 +6526,10 @@ div#mCSB_1_container{
   background: #fff;
 }
 
+.service-block-two h3 {
+  padding-top: 15px;
+}
+
 .service-block-two .inner-box .image-box{
   position: relative;
   display: block;
