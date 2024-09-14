@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Y-Link - Appointment Page</title>
+<title>Y-Link - Services Page</title>
 
 <!-- Fav Icon -->
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
@@ -23,7 +23,6 @@
 <link href="assets/css/color.css" rel="stylesheet">
 <link href="assets/css/elpath.css" rel="stylesheet">
 <link href="assets/css/jquery-ui.css" rel="stylesheet">
-<link href="assets/css/nice-select.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 
@@ -88,9 +87,9 @@
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="index.html">Home</a></li>
+                                    <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="service.html">Services</a></li>
+                                    <li class="current"><a href="service.html">Services</a></li>
                                     <li><a href="project.html">Project</a></li>
                                     <li class="dropdown"><a href="shop.html">Shop</a>
                                         <ul>
@@ -120,6 +119,9 @@
             <div class="sticky-header">
                 <div class="outer-box">
                     <div class="menu-area clearfix">
+                        <div class="logo-box">
+                            <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        </div>
                         <nav class="main-menu clearfix">
                             <!--Keep This Empty / Menu will come through Javascript-->
                         </nav>
@@ -157,75 +159,67 @@
             <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(assets/images/background/page-title.jpg);"></div>
             <div class="auto-container">
                 <div class="content-box">
-                    <h2>Quote</h2>
+                    <h2>Home Automation Service</h2>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>Quote</li>
+                        <li>Services</li>
+                        <li>Home Automation</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!-- End Page Title -->
 
-
-        <!-- appointment-section -->
-        <section class="appointment-section p_relative sec-pad">
+        <!-- service-details -->
+        <section class="service-details p_relative">
             <div class="auto-container">
-                <div class="sec-title p_relative mb_40 centred">
-                    <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Contact Us</h5>
-                    <h2 class="d_block fs_30 lh_40 fw_bold mb_25">Request for a quote</h2>
-                    <p>Consectetur adipisicing sed do eiusmod tempor incididunt labore dolore magna aliqua <br>enim minim veniam quis nostrud exercitation.</p>
-                </div>
-                <div class="form-inner">
-                    <div class="content_block_13">
-                        <div class="content-box p_relative d_block">
-                            <div class="form-inner">
-                                <form action="contact.html" method="post">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="name" placeholder="Name" required="">
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                                            <input type="email" name="email" placeholder="Email" required="">
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="phone" placeholder="Phone" required="">
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="address" placeholder="Address" required="">
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                                            <div class="select-box">
-                                                <select class="wide">
-                                                   <option data-display="Subject">Subject</option>
-                                                   <option value="1">Air Conditioning</option>
-                                                   <option value="2">Heating Service</option>
-                                                   <option value="3">Power Outlets</option>
-                                                   <option value="4">Indoor Lighting</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 form-group">
-                                            <div class="icon"><i class="icon-75"></i></div>
-                                            <input type="text" name="date" placeholder="Date" id="datepicker">
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea name="message" placeholder="Your Comment"></textarea>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <div class="message-btn centred">
-                                                <button type="submit" class="theme-btn btn-one">Get A Quote</button>
-                                            </div>
-                                        </div>
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="service-sidebar mr_50">
+                            <ul class="accordion-box">
+                                <li class="accordion block active-block">
+                                    <div class="acc-btn active">
+                                        <div class="icon-outer"></div>
+                                        <h5>Our Services</h5>
                                     </div>
-                                </form>
+                                    <div class="acc-content current">
+                                        <ul class="service-list clearfix">
+                                            <li><a href="solar-installation.html">Solar Power Installation</a></li>
+                                            <li><a href="home-automation.html">Home Automation</a></li>
+                                            <li><a href="indoor-lighting.html">House Wiring</a></li>
+                                            <li><a href="security-system.html">Security System/Gadgets</a></li>
+                                            <li><a href="electrical-panels.html">Electric Fencing</a></li>
+                                            <li><a href="electrical-panels.html">Y-Link Innovations</a></li>
+                                            <li><a href="electrical-panels.html">Training Pod</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="service-details-content">
+                            <div class="content-one p_relative d_block">
+                                <figure class="image-box"><img src="assets/images/service/service-19.jpg" alt=""></figure>
+                                <div class="text">
+                                    <h3>Home Automation</h3>
+                                    <p>Transform your living space into a smart home with Y-link’s home automation services, offering convenience, control, and security at your fingertips.</p>
+                                    <h5>Why Opt for This Service?</h5><br>
+                                    <ul class="list-style-one clearfix">
+                                        <li><strong>Savings:</strong> Reduce your electricity bills significantly by switching to solar energy.</li>
+                                        <li><strong>Environmental Impact:</strong> Contribute to a greener planet by reducing your carbon footprint.</li>
+                                        <li><strong>Independence:</strong> Rely less on the grid and more on renewable energy, ensuring power even during outages.</li>
+                                    </ul>
+                                </div>
+                                <p>Upgrade to a smarter, more secure home. <strong>Book an appointment</strong> with Y-link today and start your home automation journey!</p><br>
+                                <div class="btn-box"><a href="#" class="theme-btn btn-one">Get The Service</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- appointment-section end -->
+        <!-- service-details end -->
 
 
         <!-- subscribe-section -->
@@ -255,83 +249,83 @@
         <!-- subscribe-section end -->
 
 
-        <!-- main-footer -->
-        <footer class="main-footer p_relative bg-color-2">
-            <div class="icon-layer">
-                <img src="assets/images/icons/icon-5.png" alt="">
-            </div>
-            <div class="footer-top p_relative d_block">
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <!-- First Column -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget logo-widget">
-                                <figure class="footer-logo">
-                                    <a href="#"><img src="assets/images/footer-logo.png" alt=""></a>
-                                </figure>
-                                <div class="text">
-                                    <p>Your trusted partner in Security and innovations. We specialize in solar installations, electric fencing, car trackers, Home Automations, CCTV systems, and so on. Y-link Innovative Ventures, ensuring your peace of mind.</p>
-                                </div>
+       <!-- main-footer -->
+       <footer class="main-footer p_relative bg-color-2">
+        <div class="icon-layer">
+            <img src="assets/images/icons/icon-5.png" alt="">
+        </div>
+        <div class="footer-top p_relative d_block">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!-- First Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget logo-widget">
+                            <figure class="footer-logo">
+                                <a href="#"><img src="assets/images/footer-logo.png" alt=""></a>
+                            </figure>
+                            <div class="text">
+                                <p>Your trusted partner in Security and innovations. We specialize in solar installations, electric fencing, car trackers, Home Automations, CCTV systems, and so on. Y-link Innovative Ventures, ensuring your peace of mind.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Second Column -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget links-widget">
-                                <div class="widget-title">
-                                    <h3>Social Links:</h3>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="links-list clearfix">
-                                        <li><a href="#">Email: ylinkinform@gmail.com</a></li>
-                                    </ul>
-                                </div>
-                                <div class="right-column">
-                                    <ul class="social-links clearfix">
-                                        <li><p>Follow Us:</p></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
+                    <!-- Second Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <h3>Social Links:</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="links-list clearfix">
+                                    <li><a href="#">Email: ylinkinform@gmail.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="right-column">
+                                <ul class="social-links clearfix">
+                                    <li><p>Follow Us:</p></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Third Column -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget contact-widget">
-                                <div class="widget-title">
-                                    <h3>Contacts</h3>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="info-list clearfix">
-                                        <li>No.6 Gunning Road Abakaliki, Ebonyi State</li>
-                                        <li><a href="tel:23055873407">+234-8032230922</a></li>
-                                    </ul>
-                                </div>
+                    <!-- Third Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget contact-widget">
+                            <div class="widget-title">
+                                <h3>Contacts</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="info-list clearfix">
+                                    <li>No.6 Gunning Road Abakaliki, Ebonyi State</li>
+                                    <li><a href="tel:23055873407">+234-8032230922</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottom p_relative">
-                <div class="auto-container">
-                    <div class="bottom-inner p_relative">
-                        <div class="copyright">
-                            <p><a href="#">Y-Link</a> &copy; 2024 All Right Reserved</p>
-                        </div>
-                        <ul class="footer-nav">
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom p_relative">
+            <div class="auto-container">
+                <div class="bottom-inner p_relative">
+                    <div class="copyright">
+                        <p><a href="#">Y-Link</a> &copy; 2024 All Right Reserved</p>
                     </div>
+                    <ul class="footer-nav">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-        <!-- main-footer end -->
+        </div>
+    </footer>
+    <!-- main-footer end -->
         
     </div>
 
