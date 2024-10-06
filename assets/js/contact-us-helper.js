@@ -1,41 +1,63 @@
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent the default form submission
-    
-    // Check if the "I agree" checkbox is checked
-    if (!document.getElementById("checkbox").checked) {
-      alert("Please agree to the data collection policy.");
-      return; // Stop further processing if checkbox is not checked
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    const messageElement = document.getElementById("message");
+    const submitButton = document.getElementById("submit-button");
+    const form = document.getElementById("contact-form");
+  
+    messageElement.textContent = "Submitting..";
+    messageElement.style.display = "block";
+    submitButton.disabled = true;
+  
+    const formData = new FormData(this);
+    const keyValuePairs = [];
+    for (let pair of formData.entries()) {
+      keyValuePairs.push(pair[0] + "=" + encodeURIComponent(pair[1]));
     }
   
-    // Collect form data
-    const formData = {
-      name: document.querySelector('input[name="username"]').value,
-      email: document.querySelector('input[name="email"]').value,
-      phone: document.querySelector('input[name="phone"]').value,
-      message: document.querySelector('textarea[name="message"]').value
-    };
+    const formDataString = keyValuePairs.join("&");
   
-    // Replace with your Google Apps Script URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxwVV2Ke7eC2-fwXhAJhOBJsFIdS4jswp_Kehj64SOljfwXnkSrtXFnIhIxEAzlWYH27A/exec';
-    
-    // Send the data using fetch API
-    fetch(scriptURL, {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json'
+    fetch(
+      "https://script.google.com/macros/s/AKfycbx12T1jAZGrkIAwe8598MOzPP6bP-Lf1jZj8Wmh3NqNzmgju75e7Ek5C2mLYRHKTFq4NQ/exec",
+      {
+        redirect: "follow",
+        method: "POST",
+        body: formDataString,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+        },
       }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.result === 'success') {
-        alert('Success! Thank you for contacting Y-Link Innovative ventures. We will get back to you shortly.');
-      } else {
-        alert('Error: ' + data.error);
-      }
-    })
-    .catch(error => {
-      alert('Error: Unable to send message. Please try again later.');
-    });
+    )
+      .then(function (response) {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Failed to submit the form.");
+        }
+      })
+      .then(function (data) {
+        if (data.status === "success") {
+          messageElement.textContent = "Data submitted successfully!";
+          messageElement.style.color = "green";
+        } else {
+          messageElement.textContent = "An error occurred: " + (data.message || "Unknown error");
+          messageElement.style.color = "red";
+        }
+        messageElement.style.display = "block";
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error(error);
+        messageElement.textContent = "An error occurred while submitting the form.";
+        messageElement.style.color = "red";
+        messageElement.style.display = "block";
+      })
+      .finally(function () {
+        submitButton.disabled = false;
+        setTimeout(function () {
+          messageElement.textContent = "";
+          messageElement.style.display = "none";
+        }, 1500);
+      });
   });
   
