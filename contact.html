@@ -7,6 +7,14 @@
 
 <title>Y-Link - Contact Page</title>
 
+<!-- Facebook Pixel Code -->
+<script src="./assets/js/facebook-pixel.js"></script>
+<noscript>
+   <img height="1" width="1" 
+   src="https://www.facebook.com/tr?id=1219695629366453&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
 <!-- Fav Icon -->
 <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
 
@@ -92,13 +100,6 @@
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="service.html">Services</a></li>
                                     <li><a href="project.html">Project</a></li>
-                                    <li class="dropdown"><a href="shop.html">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Our Shop</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                        </ul>
-                                    </li> 
                                     <li><a href="blog.html">Blog</a></li>  
                                     <li class="current"><a href="contact.html">Contact</a></li> 
                                 </ul>
@@ -187,7 +188,7 @@
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12 form-column">
                         <div class="form-inner">
-                            <form method="post" action="sendemail.php" id="contact-form"> 
+                            <form id="contact-form">
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <input type="text" name="username" placeholder="Your Name" required="">
@@ -196,22 +197,22 @@
                                         <input type="email" name="email" placeholder="Your email" required="">
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <input type="text" name="phone" required="" placeholder="Phone">
+                                        <input type="text" name="phone" required="" placeholder="Phone (WhatsApp)">
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <textarea name="message" placeholder="Message"></textarea>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <div class="check-box">
-                                            <input class="check" type="checkbox" id="checkbox">
+                                            <input class="check" type="checkbox" id="checkbox" required="">
                                             <label for="checkbox">I agree that my submitted data is being collected and stored. *</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0">
-                                        <button class="theme-btn btn-one" type="submit" name="submit-form">Send Message <i class="far fa-angle-right"></i></button>
+                                        <button class="theme-btn btn-one" type="submit">Send Message <i class="far fa-angle-right"></i></button>
                                     </div>
                                 </div>
-                            </form>
+                            </form>                           
                         </div>
                     </div>
                 </div>
@@ -353,6 +354,9 @@
 
     <!-- main-js -->
     <script src="./assets/js/script.js"></script>
+
+    <!-- Cntact us script -->
+    <script src="./assets/js/contact-us-helper.js"></script>
 
 </body><!-- End of .page_wrapper -->
 </html>
