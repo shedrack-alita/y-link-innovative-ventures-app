@@ -113,6 +113,8 @@
 			}
 		});
 	}
+	  
+	  
 
 	//Fact Counter + Text Count
 	if($('.count-box').length){
