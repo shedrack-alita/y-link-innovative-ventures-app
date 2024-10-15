@@ -39,6 +39,9 @@
 }
 
 .theme-btn.btn-one{
+  background: rgb(7, 209, 7);
+}
+.theme-btn.btn-two{
   background: #eb7328;
 }
 

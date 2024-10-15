@@ -889,11 +889,11 @@ img {
 }
 
 .main-menu .navigation{
-  margin:0px;
+  margin-left: 30px;
 }
 
 .main-menu .navigation > li{
-  position:inherit;
+  position: inherit;
   float:left;
   z-index:2;
   margin: 0px 24px;

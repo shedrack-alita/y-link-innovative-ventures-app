@@ -7,13 +7,42 @@
 
 <title>Y-Link - Services Page</title>
 
-<!-- Facebook Pixel Code -->
-<script src="./assets/js/facebook-pixel.js"></script>
-<noscript>
-   <img height="1" width="1" 
-   src="https://www.facebook.com/tr?id=1219695629366453&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
+<!-- Meta Pixel Code -->
+<script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "1219695629366453");
+    fbq("track", "PageView");
+  </script>
+  <noscript
+    ><img
+      height="1"
+      width="1"
+      style="display: none"
+      src="https://www.facebook.com/tr?id=1219695629366453&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 
 <!-- Fav Icon -->
 <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
@@ -148,8 +177,14 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <!-- <div class="nav-logo"><a href="index.html"><img src="./assets/images/logo.png" alt="" title=""></a></div> -->
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+                <div class="menu-outer">
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div><br>
+                <div class="nav-right">
+                    <div class="btn-box">
+                        <a href="https://wa.link/07smww" class="theme-btn btn-one">Get A Quote</a>
+                    </div>
+                </div>
             </nav>
         </div><!-- End Mobile Menu -->
         
@@ -286,7 +321,7 @@
                                 <div class="image-box p_relative d_block">
                                     <div class="shape-1 p_absolute l_0 b_0"></div>
                                     <div class="shape-2 p_absolute l_0 b_0"></div>
-                                    <figure class="image p_relative d_block"><a href="power-outlets.html"><img src="./assets/images/service/service-15.JPG" alt=""></a></figure>
+                                    <figure class="image p_relative d_block"><a href="power-outlets.html"><img src="./assets/images/service/service-15.jpg" alt=""></a></figure>
                                 </div>
                                 <div class="lower-content p_relative d_block">
                                     <div class="icon-box p_absolute r_30 w_90 h_90 lh_90 fs_40 b_radius_50 centred"><i class="icon-20"></i></div>
